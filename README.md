@@ -1,4 +1,8 @@
-# React + Vite
+<<<<<<< HEAD
+# My-Portfolio-yuthish_3117
+
+## Built with React + Vite
+>>>>>>> 2227001 (Resolved README.md conflict)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
