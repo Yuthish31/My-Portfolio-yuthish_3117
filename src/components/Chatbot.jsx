@@ -11,7 +11,7 @@ function Chatbot() {
   const chatWindowRef = useRef(null);
   const chatbotContainerRef = useRef(null);
 
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
   // Auto-scroll to bottom when chat updates
   useEffect(() => {
@@ -199,7 +199,7 @@ function Chatbot() {
     } catch {
       setChat((prev) => [
         ...prev,
-        { type: 'bot', text: 'Something went wrong.' },
+        { type: 'bot', text: 'The AI service is temporarily unavailable.' },
       ]);
     } finally {
       setIsLoading(false);
