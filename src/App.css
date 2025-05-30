@@ -1,0 +1,65 @@
+@font-face{
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Book.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Book.woff') format('woff');
+  font-weight: 100;
+} 
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Medium.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Medium.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #FA8D3D;
+}
+

@@ -1,0 +1,28 @@
+.haikyuu-loader {
+    height: 100vh;
+    background: linear-gradient(to top, #6e6d6d, #ffffff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jumper {
+    width: 80px;
+    height: 80px;
+    background: url('../assets//img/Volleyball.png') no-repeat center/contain;
+    animation: jumpBounce 1s infinite ease-in-out;
+  }
+  
+  @keyframes jumpBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .loading-text {
+    font-family: 'Gotham', sans-serif;
+    margin-top: 1rem;
+    color: #000000;
+  }
+  

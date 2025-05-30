@@ -1,0 +1,155 @@
+/* HallAllotment.css */
+.hall-allotment-section {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .hall-allotment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Decorative Circles */
+  .hall-allotment-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .hall-allotment-top-left-line {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    top: -150px;
+    left: -150px;
+  }
+  
+  .hall-allotment-thin-arc-circle {
+    width: 600px;
+    height: 600px;
+    border: 1px dashed rgba(52, 152, 219, 0.15);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: -300px;
+    right: -300px;
+  }
+  
+  .hall-allotment-right-accent-circle {
+    width: 150px;
+    height: 150px;
+    background: rgba(155, 89, 182, 0.1);
+    bottom: 100px;
+    right: 100px;
+  }
+  
+  .hall-allotment-left-circle-smooth {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(231, 76, 60, 0.05) 0%, transparent 70%);
+    bottom: -200px;
+    left: -200px;
+  }
+  
+  /* Hall Allotment Image */
+  .hall-allotment-image {
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 20px #6caacc);
+    transform: rotate(90deg) perspective(1000px);
+    transition: transform 0.3s ease;
+  }
+  
+  .hall-allotment-image:hover {
+    transform: rotate(90deg) scale(1.03) rotateX(5deg) rotateY(5deg);
+  }
+  
+  .hall-allotment-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Text Content */
+  .hall-allotment-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .hall-allotment-text h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hall-allotment-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .goal-section p {
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hall-allotment-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hall-allotment-text h1 {
+      font-size: 2rem;
+    }
+
+    .hall-allotment-image {
+        padding: 1.5rem;
+        transform: rotate(0deg); /* Remove rotation on mobile */
+      }
+
+      .hall-allotment-image:hover {
+        transform: translateY(-5px);
+      }
+    
+    .hall-allotment-circles {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hall-allotment-container {
+      padding: 0 1rem;
+    gap: 2rem;
+    }
+    
+    .tech-stack {
+      justify-content: center;
+    }
+    
+    .features li {
+      font-size: 0.95rem;
+    }
+  }

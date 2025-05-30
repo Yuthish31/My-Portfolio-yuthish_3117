@@ -1,0 +1,332 @@
+/* Home.css */
+@font-face{
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Book.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Book.woff') format('woff');
+  font-weight: 100;
+} 
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Medium.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Medium.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/Gotham/Gotham-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Gotham/Gotham-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Gotham', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Circle Background Elements */
+.circle-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  animation: float 6s ease-in-out infinite;
+}
+
+.top-left-circle {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -150px;
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(0, 100, 200, 0.4));
+  animation-delay: 0s;
+}
+
+.bottom-left-dot-group {
+  bottom: 100px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: transparent;
+  animation: none;
+}
+
+.bottom-left-dot-group .dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.bottom-left-dot-group .dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.bottom-left-dot-group .dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.right-circle {
+  width: 400px;
+  height: 400px;
+  right: -200px;
+  bottom: -200px;
+  background: linear-gradient(45deg, rgba(255, 100, 100, 0.3), rgba(200, 50, 50, 0.4));
+  animation-delay: 1s;
+}
+
+.left-circle {
+  width: 200px;
+  height: 200px;
+  left: -50px;
+  top: 50%;
+  background: linear-gradient(225deg, rgba(100, 255, 100, 0.3), rgba(50, 200, 50, 0.4));
+  animation-delay: 2s;
+}
+
+.thin-arc-circle {
+  width: 600px;
+  height: 600px;
+  right: -300px;
+  top: -300px;
+  border: 2px dashed rgba(0, 0, 0, 0.137);
+  background: transparent;
+  animation: rotate 30s linear infinite;
+}
+
+.right-accent {
+  width: 100px;
+  height: 100px;
+  right: 100px;
+  top: 30%;
+  background: rgba(200, 150, 255, 0.3);
+  animation-delay: 1.5s;
+}
+
+/* Main Content */
+.home-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content {
+  order: 2;
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  padding: 2rem;
+  position: relative;
+}
+
+.im h1 {
+  font-family: 'Gotham', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.2s forwards;
+}
+
+h1 span {
+  font-family: 'Gotham', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.RES {
+  font-size: 1.09rem;
+}
+
+.CON {
+  font-size: 1.0rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #333;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.character {
+  order: 1;
+  margin-left: 8rem;
+  max-width: 380px;
+}
+
+.character img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .home-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content {
+    order: 1;
+    width: 60%;
+    padding-right: 3rem;
+  }
+  
+  .character {
+    order: 2;
+    width: 40%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h1 span {
+    font-size: 2rem;
+  }
+
+  .content{
+    order: 2;
+  }
+
+  .character{
+    order: 1;
+    width: 30%;
+  }
+  
+  .circle-background .circle {
+    display: none;
+  }
+  
+  .top-left-circle, .right-circle {
+    display: block;
+    opacity: 0.1;
+  }
+}
+
+/* Typewriter cursor styling */
+.Typewriter__cursor {
+  color: #333;
+  font-weight: 100;
+}

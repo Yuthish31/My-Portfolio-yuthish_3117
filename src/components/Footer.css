@@ -1,0 +1,17 @@
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: transparent; /* Or use a matching section color */
+  }
+
+  .footer {
+    animation: fadeIn 2s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
