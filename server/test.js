@@ -1,31 +1,50 @@
-// test.js
 import dotenv from 'dotenv';
 import axios from 'axios';
-dotenv.config();
 
-const apiKey = process.env.OPENROUTER_API_KEY;
+// 1. Force reload .env from current directory
+dotenv.config({ path: './.env' });
 
+// 2. Debug environment
+console.log('Environment:', {
+  KeyPresent: !!process.env.OPENROUTER_API_KEY,
+  KeyLength: process.env.OPENROUTER_API_KEY?.length,
+  NodeEnv: process.env.NODE_ENV
+});
+
+// 3. Test with exact headers OpenRouter expects
 async function test() {
+  const headers = {
+    'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+    'Content-Type': 'application/json',
+    'HTTP-Referer': 'http://localhost:5000', // Must match your dev URL
+    'X-Title': 'API-Test'
+  };
+
+  console.log('Request Headers:', headers);
+
   try {
     const response = await axios.post(
       'https://openrouter.ai/api/v1/chat/completions',
       {
-        model: 'openai/gpt-3.5-turbo', // or try 'mistralai/mixtral-8x7b', 'anthropic/claude-3-opus-20240229', etc.
-        messages: [{ role: 'user', content: 'Hello!' }],
+        model: 'openai/gpt-3.5-turbo',
+        messages: [{ role: 'user', content: 'Hello!' }]
       },
       {
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'HTTP-Referer': 'http://localhost', // Replace with your website URL if deployed
-          'X-Title': 'My Chatbot',            // Optional custom name
-        },
+        headers,
+        timeout: 5000
       }
     );
-
-    console.log('AI Response:', response.data.choices[0].message.content);
+    console.log('Success:', response.data.choices[0].message.content);
   } catch (err) {
-    console.error('OpenRouter Error:', err.response?.data || err.message);
+    console.error('Full Error:', {
+      status: err.response?.status,
+      headers: err.response?.headers,
+      data: err.response?.data,
+      config: {
+        url: err.config?.url,
+        headers: err.config?.headers
+      }
+    });
   }
 }
 
