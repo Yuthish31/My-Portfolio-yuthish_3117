@@ -11,7 +11,7 @@ function Chatbot() {
   const chatWindowRef = useRef(null);
   const chatbotContainerRef = useRef(null);
 
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl =  'http://localhost:5000';
 
   // Auto-scroll to bottom when chat updates
   useEffect(() => {
