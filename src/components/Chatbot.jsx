@@ -8,6 +8,7 @@ function Chatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [showQuickActions, setShowQuickActions] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const chatWindowRef = useRef(null);
   const chatbotContainerRef = useRef(null);
 
@@ -27,6 +28,7 @@ function Chatbot() {
           chatbotContainerRef.current && 
           !chatbotContainerRef.current.contains(event.target) && 
           !event.target.closest('.chatbot-toggle')) {
+        setScrollPosition(chatWindowRef.current?.scrollTop || 0);
         setShowChat(false);
       }
     };
@@ -43,6 +45,13 @@ function Chatbot() {
       setShowQuickActions(false);
     }
   }, [chat]);
+
+  // Restore scroll position when reopening chat
+  useEffect(() => {
+    if (showChat && chatWindowRef.current) {
+      chatWindowRef.current.scrollTop = scrollPosition;
+    }
+  }, [showChat]);
 
   const quickActions = [
     { text: '📄 Resume', prompt: 'Show your resume' },
@@ -147,7 +156,7 @@ function Chatbot() {
           type: 'bot',
           text:(
             <>
-              🚀 I’ve built several projects that showcase my skills in full-stack development.<br /><br />
+              🚀 I've built several projects that showcase my skills in full-stack development.<br /><br />
               1️⃣ Attendance Management System – A smart mobile app built with Android Studio and Firebase. It simplifies student attendance using Present/Absent buttons, real-time updates, and an intuitive UI.<br /><br />
               2️⃣ Portfolio Website – A React-based interactive portfolio with animations, smart chatbot, contact form (EmailJS), and multi-language support.<br /><br />
               3️⃣ Hall Allotment Web App – A responsive web app designed to manage student hall allocations effectively.<br /><br />
