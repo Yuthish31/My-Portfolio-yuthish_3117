@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
@@ -8,11 +8,23 @@ export default defineConfig({
       '/api': {
         target: 'https://backend-yuthish-3117.onrender.com',
         changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
       }
-    }
+    },
+    historyApiFallback: true  // Add this line
   },
   build: {
-    outDir: 'dist', // Explicitly set output directory
-    emptyOutDir: true // Clear the directory before building
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: './index.html'
+    }
+  },
+  base: '/',  // Ensure this is set
+  preview: {
+    port: 4173,
+    strictPort: true,
+    historyApiFallback: true  // For local preview testing
   }
-})
+});
