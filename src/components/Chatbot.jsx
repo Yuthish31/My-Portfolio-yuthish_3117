@@ -11,7 +11,7 @@ function Chatbot() {
   const chatWindowRef = useRef(null);
   const chatbotContainerRef = useRef(null);
 
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = import.meta.env.VITE_API_URL;
 
   // Auto-scroll to bottom when chat updates
   useEffect(() => {
