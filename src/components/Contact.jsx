@@ -215,7 +215,7 @@ const Contact = () => {
         )}
         
         <div className="contact-footer">
-          <p>© {new Date().getFullYear()} yuthish_3117. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} yuthish-3117. All rights reserved.</p>
         </div>
       </div>
     </div>
