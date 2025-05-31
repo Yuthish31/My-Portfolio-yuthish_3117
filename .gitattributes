@@ -1,0 +1,10 @@
+* text=auto
+
+# Debug files
+*.pdb
+*.idb
+
+# System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
