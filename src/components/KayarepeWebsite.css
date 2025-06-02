@@ -1,0 +1,176 @@
+/* KayarepeWebsite.css */
+.kayarepe-section {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .kayarepe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Decorative Circles */
+  .kayarepe-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .kayarepe-top-left-line {
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    top: -150px;
+    left: -150px;
+  }
+  
+  .kayarepe-thin-arc-circle {
+    width: 600px;
+    height: 600px;
+    border: 1px dashed rgba(52, 152, 219, 0.15);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: -300px;
+    right: -300px;
+  }
+  
+  .kayarepe-right-accent-circle {
+    width: 150px;
+    height: 150px;
+    background: rgba(155, 89, 182, 0.1);
+    bottom: 100px;
+    right: 100px;
+  }
+  
+  .kayarepe-left-circle-smooth {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(231, 76, 60, 0.05) 0%, transparent 70%);
+    bottom: -200px;
+    left: -200px;
+  }
+  
+  /* Kayarepe Image */
+  .kayarepe-image {
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 20px #6caacc);
+    transition: transform 0.3s ease;
+  }
+  
+  .kayarepe-image:hover {
+    transform: scale(1.03) rotateX(5deg) rotateY(5deg);
+  }
+  
+  .kayarepe-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Text Content */
+  .kayarepe-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .kayarepe-text h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .kayarepe-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .goal-section p {
+    margin: 0;
+    color: #555;
+  }
+
+  /* Button/Link Styling */
+.kayarepe-text a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .kayarepe-text a:hover {
+    background-color: #2c80b4;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .kayarepe-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .kayarepe-text h1 {
+      font-size: 2rem;
+    }
+  
+    .kayarepe-image {
+      padding: 1.5rem;
+      transform: rotate(0deg); /* Remove rotation on mobile */
+    }
+  
+    .kayarepe-image:hover {
+      transform: translateY(-5px);
+    }
+  
+    .kayarepe-circles {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .kayarepe-container {
+      padding: 0 1rem;
+      gap: 2rem;
+    }
+  
+    .tech-stack {
+      justify-content: center;
+    }
+  
+    .features li {
+      font-size: 0.95rem;
+    }
+  }
+  

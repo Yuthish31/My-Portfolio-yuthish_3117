@@ -55,9 +55,10 @@ function Chatbot() {
 
   const quickActions = [
     { text: '📄 Resume', prompt: 'Show your resume' },
+    { text: '💬 About Me', prompt: 'Tell me About yourself' },
     { text: '🛠️ Skills', prompt: 'What are your skills?' },
     { text: '📞 Contact', prompt: 'How can I contact you?' },
-    { text: '🗂️ Attendance App', prompt: 'Tell me about attendance system' },
+    { text: '🗂️ App Project', prompt: 'Tell me about attendance system' },
     { text: '💼 Projects', prompt: 'Show your projects' }
   ];
 
@@ -83,6 +84,38 @@ function Chatbot() {
           text: '📄 Here is my resume:',
           link: '/assets/Yuthishthira_senthil_M_Resum.pdf',
         },
+      ]);
+      setIsLoading(false);
+      setInput('');
+      return;
+    }
+
+    if (
+      lowerInput.includes('about') ||
+      lowerInput.includes('about you') ||
+      lowerInput.includes('உன்னைப் பற்றி')
+    ) {
+      setChat((prev) => [
+        ...prev,
+        {
+          type: 'bot',
+          text:(
+            <>
+              👋 Hi, I'm Yuthishthira Senthil M<br />
+                💻 A passionate Web Developer & 🎨 Creative Designer from Tamil Nadu, India.<br/><br />
+
+                🧠 I love building responsive websites using HTML, CSS, JavaScript, React, and Vite.js<br />
+                🛠️ Tools I use: VS Code, Figma, Firebase, Canva, CapCut, KineMaster<br/><br />
+
+                🔧 I’ve worked on:<br/>
+                • 📸 Dora Photography – Frontend Designer<br/>
+                • 🌐 Kayarepe Technology – Website Developer<br/>
+                • 💼 My Portfolio – yuthish-3117.netlify.app<br/><br />
+
+                🚀 I'm always learning and love turning ideas into real digital experiences.<br />
+                🤝 Open to new opportunities and collaborations!<br />
+            </>
+          )},
       ]);
       setIsLoading(false);
       setInput('');

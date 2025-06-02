@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AppImage from '../assets/img/App.jpeg';
 import WebImage from '../assets/img/Web.jpeg'; // Replace with your web image
 import PosterImage from '../assets/img/Design-page.jpg'; // Replace with your poster image
+import WebProjectImage from '../assets/img/Web-Project.jpeg';
 
 const Creations = () => {
     return (
@@ -29,13 +30,22 @@ const Creations = () => {
                     {/* Card 2 - Web */}
                     <div className="creation-card">
                         <img src={WebImage} alt="Hostel Allotment" />
-                        <h3>Hostel Allotment System</h3>
-                        <p>Web application for managing student hostel room allocations.</p>
-                        <p><strong>Tech Stack:</strong> React, HTML, CSS, PHP, etc.</p>
+                        <h3>Hall Allotment System</h3>
+                        <p>Web application for managing student Exam Hall allocations.</p>
+                        <p><strong>Tech Stack:</strong>VS Code, React, HTML, CSS, PHP</p>
                         <Link to="/hallallotment" className="bttn">View More</Link>
                     </div>
 
                     {/* Card 3 - Poster */}
+                    <div className="creation-card">
+                        <img src={WebProjectImage} alt="Kayarepe Technology" />
+                        <h3>Website for Kayarepe Company</h3>
+                        <p>Crafted a fully responsive and modern business website for Kayarepe Technology</p>
+                        <p><strong>Tech Stack:</strong>VS Code, HTML, CSS, JavaScript</p>
+                        <Link to="/kayarepewebsite" className="bttn">View More</Link>
+                    </div>
+
+                    {/* Card 4 - Poster */}
                     <div className="creation-card">
                         <img src={PosterImage} alt="Creative Posters" />
                         <h3>Poster Design Services</h3>

@@ -60,7 +60,7 @@ function Home() {
           />
         </h1>
           <Animated duration={2}><p className="subtitle">
-            A dream isn’t reality, but who’s to say which is which if you never stop chasing it?
+          Dreams may not be real yet, but the pursuit makes them possible.
           </p></Animated>
           <div className="buttons">
             <Animated delay={0.4}>
