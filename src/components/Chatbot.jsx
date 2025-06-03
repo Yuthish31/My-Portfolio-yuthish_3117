@@ -55,7 +55,7 @@ function Chatbot() {
 
   const quickActions = [
     { text: '📄 Resume', prompt: 'Show your resume' },
-    { text: '💬 About Me', prompt: 'Tell me About yourself' },
+    { text: '💬 About Me', prompt: 'Tell me about yourself' },
     { text: '🛠️ Skills', prompt: 'What are your skills?' },
     { text: '📞 Contact', prompt: 'How can I contact you?' },
     { text: '🗂️ App Project', prompt: 'Tell me about attendance system' },
@@ -91,7 +91,7 @@ function Chatbot() {
     }
 
     if (
-      lowerInput.includes('about') ||
+      lowerInput.includes('about me') ||
       lowerInput.includes('about you') ||
       lowerInput.includes('உன்னைப் பற்றி')
     ) {

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './App.css';
 
 import Header from './components/Header';
+import CustomCursor from './components/CustomCursor';
 import Home from './components/Home';
 import About from './components/About';
 import Creations from './components/Creations';
@@ -77,6 +78,7 @@ function App() {
             transition={{ duration: 0.5 }}
           >
             <Header />
+            <CustomCursor />
             <AnimatedRoutes />
             <Chatbot />
           </motion.div>

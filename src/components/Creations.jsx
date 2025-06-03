@@ -32,7 +32,7 @@ const Creations = () => {
                         <img src={WebImage} alt="Hostel Allotment" />
                         <h3>Hall Allotment System</h3>
                         <p>Web application for managing student Exam Hall allocations.</p>
-                        <p><strong>Tech Stack:</strong>VS Code, React, HTML, CSS, PHP</p>
+                        <p><strong>Tech Stack:</strong> VS Code, React, HTML, CSS, PHP</p>
                         <Link to="/hallallotment" className="bttn">View More</Link>
                     </div>
 
@@ -41,7 +41,7 @@ const Creations = () => {
                         <img src={WebProjectImage} alt="Kayarepe Technology" />
                         <h3>Website for Kayarepe Company</h3>
                         <p>Crafted a fully responsive and modern business website for Kayarepe Technology</p>
-                        <p><strong>Tech Stack:</strong>VS Code, HTML, CSS, JavaScript</p>
+                        <p><strong>Tech Stack:</strong> VS Code, HTML, CSS, JavaScript</p>
                         <Link to="/kayarepewebsite" className="bttn">View More</Link>
                     </div>
 
