@@ -234,6 +234,12 @@
   }
 }
 
+.chatbot-button {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
 /* Quick Actions */
 .quick-actions {
   display: flex;
