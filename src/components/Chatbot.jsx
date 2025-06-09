@@ -286,7 +286,7 @@ function Chatbot() {
                     {msg.link && (
                       <>
                         <br />
-                        <a href={msg.link} target="_blank" rel="noreferrer">
+                        <a href={msg.link} target="_blank" rel="noreferrer" className="chatbot-button">
                           📥 Download
                         </a>
                       </>

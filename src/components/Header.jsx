@@ -10,16 +10,15 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menu when clicking any link
+  const closeMenu = () => setMenuOpen(false);
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
@@ -41,26 +40,27 @@ function Header() {
       </div>
 
       <button 
-        className="mobile-menu-btn"
+        className={`mobile-menu-btn ${menuOpen ? 'open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
       >
         {menuOpen ? '✕' : '☰'}
       </button>
 
-      <nav>
-        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+      <nav className={`nav-container ${menuOpen ? 'active' : ''}`}>
+        <ul className="nav-links">
           <li className={isActive('/') ? 'active' : ''}>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeMenu}>Home</Link>
           </li>
           <li className={isActive('/about') ? 'active' : ''}>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={closeMenu}>About</Link>
           </li>
           <li className={isActive('/creations') ? 'active' : ''}>
-            <Link to="/creations">Creations</Link>
+            <Link to="/creations" onClick={closeMenu}>Creations</Link>
           </li>
           <li className={isActive('/contact') ? 'active' : ''}>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={closeMenu}>Contact</Link>
           </li>
         </ul>
       </nav>
