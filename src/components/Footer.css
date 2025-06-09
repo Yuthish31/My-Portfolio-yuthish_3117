@@ -3,7 +3,8 @@
     padding: 1rem;
     font-size: 0.9rem;
     color: #333;
-    background-color: transparent; /* Or use a matching section color */
+    background-color: transparent;
+    margin-top: auto; /* Or use a matching section color */
   }
 
   .footer {
