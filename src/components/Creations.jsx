@@ -2,9 +2,10 @@ import './Creations.css';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AppImage from '../assets/img/App.jpeg';
-import WebImage from '../assets/img/Web.jpeg'; // Replace with your web image
-import PosterImage from '../assets/img/Design-page.jpg'; // Replace with your poster image
+import WebImage from '../assets/img/Web.jpeg';
+import PosterImage from '../assets/img/Design-page.jpg';
 import WebProjectImage from '../assets/img/Web-Project.jpeg';
+import Twofacewebsite from '../assets/img/Twofacewebsite.jpeg';
 
 const Creations = () => {
     return (
@@ -36,7 +37,16 @@ const Creations = () => {
                         <Link to="/hallallotment" className="bttn">View More</Link>
                     </div>
 
-                    {/* Card 3 - Poster */}
+                    {/* Card 3 - Business Website */}
+                    <div className="creation-card">
+                        <img src={Twofacewebsite} alt="Nagaquickservices" />
+                        <h3>2-Face Website</h3>
+                        <p>Crafted a fully responsive and 2-face website for Our Family Business</p>
+                        <p><strong>Tech Stack:</strong> VS Code, React, Vite, Firebase, WhatsApp API</p>
+                        <Link to="/twofacewebsite" className="bttn">View More</Link>
+                    </div>
+
+                    {/* Card 4 - Company Website */}
                     <div className="creation-card">
                         <img src={WebProjectImage} alt="Kayarepe Technology" />
                         <h3>Website for Kayarepe Company</h3>
@@ -45,7 +55,7 @@ const Creations = () => {
                         <Link to="/kayarepewebsite" className="bttn">View More</Link>
                     </div>
 
-                    {/* Card 4 - Poster */}
+                    {/* Card 5 - Poster */}
                     <div className="creation-card">
                         <img src={PosterImage} alt="Creative Posters" />
                         <h3>Poster Design Services</h3>

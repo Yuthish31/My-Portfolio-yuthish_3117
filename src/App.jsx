@@ -18,6 +18,7 @@ import ERROR_404 from './components/ERROR_404';
 import Loader from './components/Loader';
 import Chatbot from './components/Chatbot';
 import KayarepeWebsite from './components/KayarepeWebsite';
+import TwoFaceWebsite from './components/TwoFaceWebsite';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
           <Route path="/attendance_app" element={<Attendance_App />} />
           <Route path="/hallallotment" element={<HallAllotment />} />
           <Route path="/kayarepewebsite" element={<KayarepeWebsite />} />
+          <Route path="/twofacewebsite" element={<TwoFaceWebsite/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<ERROR_404 />} />
         </Routes>
