@@ -248,7 +248,7 @@ const About = () => {
             </div>
             
             <div className="career">
-              <Animated delay={0.7}><h1>Career Goal</h1></Animated>
+              <Animated delay={0.7}><h1>Career Goals</h1></Animated>
               <Animated delay={0.8}>
                 <p>
                   I aim to build a successful career where I can earn well,
