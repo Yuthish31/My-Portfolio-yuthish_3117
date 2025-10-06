@@ -95,7 +95,7 @@ const About = () => {
             <Animated delay={0.5}>
               <ul className="S">
                 <li><strong>Web Development:</strong> HTML, CSS, JavaScript, React JS, PHP</li>
-                <li><strong>Creative Tools:</strong> Figma, Canva, CapCut, KineMaster</li>
+                <li><strong>Creative Tools:</strong> VS Code, Figma, Canva, CapCut, KineMaster</li>
                 <li><strong>Frameworks & Tools:</strong> React JS, Firebase, Git</li>
               </ul>
             </Animated>
