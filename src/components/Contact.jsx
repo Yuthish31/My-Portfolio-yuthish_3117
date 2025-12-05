@@ -120,7 +120,7 @@ const Contact = () => {
           <div className="info-items">
             <div className="info-item">
               <FaPhone className="info-icon phone-icon" />
-              <span>+91 9360334471</span>
+              <span>+91 93603 *****</span>
             </div>
             <div className="info-item">
               <FaEnvelope className="info-icon" />
