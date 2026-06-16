@@ -180,10 +180,108 @@ const About = () => {
       </div>
     </div>
         
-        <a href="#passions" className="scroll-down2">↓</a>
+        <a href="#experience" className="scroll-down2">↓</a>
       </motion.section>
 
-      {/* Section 4 - Passions */}
+      {/* Section 4 - Professional Experience */}
+      <motion.section
+      className="about-section next-about-section"
+      id="experience"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}>
+
+      <div className="about4-circles">
+        <div className="circle about4-top-left-line"></div>
+        <div className="circle about4-left-circle-smooth"></div>
+      </div>
+
+      <div className="about-container experience-section">
+
+
+      <div className="about-text experience-content">
+
+        <Animated delay={0.2}>
+          <h1>Professional Experience</h1>
+        </Animated>
+
+        <Animated delay={0.3}>
+          <h3>Lab Technician & IT Support</h3>
+        </Animated>
+
+        <Animated delay={0.4}>
+          <p>
+            <strong>Nehru Institute of Technology (NIT), Coimbatore</strong><br />
+            July 2025 – Present
+          </p>
+        </Animated>
+
+        <Animated delay={0.5}>
+          <p>
+            Currently working as a Lab Technician and IT Support Professional at Nehru Institute of Technology (NIT), 
+            part of the Nehru Group of Institutions (NGI), Coimbatore. I manage Communication Lab – 5 and 
+            provide technical support for campus networking, computer systems, printers, Wi-Fi, and online examination 
+            infrastructure, ensuring smooth day-to-day operations across the campus.
+          </p>
+        </Animated>
+
+        <Animated delay={0.6}>
+          <h3>Responsibilities</h3>
+        </Animated>
+
+        <Animated delay={0.7}>
+          <ul>
+            <li>Manage Communication Lab – 5 for first-year students.</li>
+            <li>Configure and troubleshoot wired and wireless networks.</li>
+            <li>Install and maintain network printers across departments.</li>
+            <li>Configure IP cameras and integrate them into campus networks.</li>
+            <li>Provide technical support for systems, software, and hardware issues.</li>
+            <li>Monitor Wi-Fi connectivity and network performance.</li>
+          </ul>
+        </Animated>
+
+        <Animated delay={0.8}>
+          <h3>Online Examination Support</h3>
+        </Animated>
+
+        <Animated delay={0.9}>
+          <ul>
+            <li>SWAYAM Online Examinations</li>
+            <li>Indian Coast Guard (CGCAT / CGEPT) Examinations</li>
+            <li>TCS Recruitment Assessments</li>
+            <li>College Entrance Examinations</li>
+            <li>Network setup and troubleshooting during online exams.</li>
+            <li>System maintenance and technical assistance during examinations.</li>
+          </ul>
+        </Animated>
+
+        <Animated delay={1.0}>
+          <h3>Skills & Experience Gained</h3>
+        </Animated>
+
+        <Animated delay={1.1}>
+          <ul>
+            <li>Network Administration</li>
+            <li>Technical Support & Troubleshooting</li>
+            <li>Printer Configuration</li>
+            <li>IP Camera Installation & Configuration</li>
+            <li>Exam Infrastructure Management</li>
+            <li>Problem Solving & Team Collaboration</li>
+          </ul>
+        </Animated>
+
+      </div>
+
+
+  </div>
+
+<a href="#passions" className="scroll-down2">↓</a>
+
+</motion.section>
+
+
+      {/* Section 5 - Passions */}
       <motion.section
         className="about-section next-about-section"
         id="passions"
