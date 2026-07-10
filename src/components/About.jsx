@@ -220,7 +220,7 @@ const About = () => {
         <Animated delay={0.5}>
           <p>
             Currently working as a Lab Technician and IT Support Professional at Nehru Institute of Technology (NIT), 
-            part of the Nehru Group of Institutions (NGI), Coimbatore. I manage Communication Lab – 5 and 
+            part of the Nehru Group of Institutions (NGI), Coimbatore. I manage Communication Lab and 
             provide technical support for campus networking, computer systems, printers, Wi-Fi, and online examination 
             infrastructure, ensuring smooth day-to-day operations across the campus.
           </p>
@@ -232,7 +232,7 @@ const About = () => {
 
         <Animated delay={0.7}>
           <ul>
-            <li>Manage Communication Lab – 5 for first-year students.</li>
+            <li>Manage Communication Lab.</li>
             <li>Configure and troubleshoot wired and wireless networks.</li>
             <li>Install and maintain network printers across departments.</li>
             <li>Configure IP cameras and integrate them into campus networks.</li>
@@ -242,13 +242,13 @@ const About = () => {
         </Animated>
 
         <Animated delay={0.8}>
-          <h3>Online Examination Support</h3>
+          <h3>Online Examination Techical Support</h3>
         </Animated>
 
         <Animated delay={0.9}>
           <ul>
             <li>SWAYAM Online Examinations</li>
-            <li>Indian Coast Guard (CGCAT / CGEPT) Examinations</li>
+            <li>Central Government Examinations</li>
             <li>TCS Recruitment Assessments</li>
             <li>College Entrance Examinations</li>
             <li>Network setup and troubleshooting during online exams.</li>
