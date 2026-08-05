@@ -242,7 +242,7 @@ const About = () => {
         </Animated>
 
         <Animated delay={0.8}>
-          <h3>Online Examination Techical Support</h3>
+          <h3>Online Examination Technical Support</h3>
         </Animated>
 
         <Animated delay={0.9}>
