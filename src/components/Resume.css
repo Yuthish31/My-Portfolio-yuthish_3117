@@ -1,0 +1,1686 @@
+/* ==========================================
+   RESUME CONTAINER
+========================================== */
+
+.resume-page{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+    padding:10px 50px;
+
+    background:#eef3fb;
+}
+
+.resume-page .resume {
+    width:70%;
+    max-width:900px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   CAREER-HEADER
+========================================== */
+
+.resume-page .career-header {
+    background: linear-gradient(135deg,#2563eb,#1e40af);
+    color: white;
+    padding: 45px 55px;
+    text-align: center;
+}
+
+.resume-page .career-header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.resume-page .designation {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: .95;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.resume-page .contact {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.resume-page .contact span {
+    font-size: 14px;
+}
+
+.resume-page .contact i {
+    margin-right: 6px;
+}
+
+/* ==========================================
+   SOCIAL LINKS
+========================================== */
+
+.resume-page .links {
+
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+}
+
+.resume-page .links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.15);
+
+    backdrop-filter: blur(10px);
+
+    transition: .3s;
+
+    font-size: 14px;
+
+}
+
+.resume-page .links a:hover{
+
+    background:white;
+
+    color:#2563eb;
+
+    text-decoration: none;
+
+    transform:translateY(-2px);
+
+}
+
+.resume-page .links i{
+
+    margin-right:6px;
+
+}
+
+/* ==========================================
+   PROFESSIONAL SUMMARY
+========================================== */
+
+.resume-page .summary{
+
+    padding:35px 45px;
+
+}
+
+.resume-page .summary h2{
+
+    font-family:"Gotham",sans-serif;
+
+    color:#2563eb;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    margin-bottom:14px;
+
+    position:relative;
+
+}
+
+.resume-page .summary h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:70px;
+
+    height:4px;
+
+    background:#2563eb;
+
+    border-radius:10px;
+
+}
+
+.resume-page .summary p{
+
+    margin-top:22px;
+
+    text-align:justify;
+
+    font-size:15px;
+
+    color:#4b5563;
+
+    line-height:1.8;
+
+}
+
+.resume-page .print-summary{
+
+    display:none;
+
+}
+
+/* ==========================================
+   COMMON CARD
+========================================== */
+
+.resume-page .card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    transition:.3s;
+
+}
+
+.resume-page .card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.10);
+
+}
+
+.resume-page .card h2{
+
+    font-family:"Gotham",sans-serif;
+
+    color:#2563eb;
+
+    font-size:19px;
+
+    font-weight: 500;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+}
+
+.resume-page .card h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:45px;
+
+    height:3px;
+
+    background:#2563eb;
+
+    border-radius:10px;
+
+}
+
+.resume-page .card h3{
+
+    font-family: "Gotham",sans-serif;
+
+    font-weight: 500;
+
+    margin-top:16px;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    color:#111827;
+
+}
+
+.resume-page .card p{
+
+    font-size:14px;
+
+    color:#4b5563;
+
+}
+
+.resume-page .card span{
+
+    font-size:13px;
+
+    color:#6b7280;
+
+}
+
+.resume-page .card ul{
+
+    margin-left:18px;
+
+    margin-top:8px;
+
+}
+
+.resume-page .card ul li{
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   CONTENT LAYOUT
+========================================== */
+
+.resume-page .content{
+
+    display:grid;
+
+    grid-template-columns:52% 125%;
+
+    gap:25px;
+
+}
+
+.resume-page .resume-name{
+    color: #fff;
+}
+
+.resume-page .left{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.resume-page .right{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================
+   TECHNICAL SKILLS
+========================================== */
+
+.resume-page .skill-group{
+
+    margin-bottom:18px;
+
+}
+
+.resume-page .skill-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+.resume-page .skill-group h3{
+
+    font-size:15px;
+
+    color:#2563eb;
+
+    font-weight:400;
+
+    margin-bottom:6px;
+
+}
+
+.resume-page .skill-group p{
+
+    font-size:14px;
+
+    color:#4b5563;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   EDUCATION
+========================================== */
+
+.resume-page .left .card h3{
+
+    font-weight:400;
+
+}
+
+.resume-page .left .card span{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+}
+
+/* ==========================================
+   EXPERIENCE
+========================================== */
+
+.resume-page .job{
+
+    position:relative;
+
+    padding-left:22px;
+
+    margin-bottom:25px;
+
+}
+
+.resume-page .job::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:6px;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+}
+
+.resume-page .job::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:4px;
+
+    top:20px;
+
+    width:2px;
+
+    height:calc(100% - 10px);
+
+    background:#dbeafe;
+
+}
+
+.resume-page .job:last-child::after{
+
+    display:none;
+
+}
+
+.resume-page .job h3{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    color:#111827;
+
+    font-size:18px;
+
+    margin-bottom:5px;
+
+}
+
+.resume-page .job .company{
+
+    color:#2563eb;
+
+    font-weight:500;
+
+}
+
+.resume-page .job .divider{
+
+    color:#9ca3af;
+
+    font-weight:500;
+
+}
+
+.resume-page .job span{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    display:block;
+
+    margin-bottom:3px;
+
+}
+
+.resume-page .job small{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    margin-bottom:12px;
+
+}
+
+.resume-page .job ul{
+
+    margin-left:18px;
+
+}
+
+.resume-page .job ul li{
+
+    margin-bottom:8px;
+
+    color:#4b5563;
+
+}
+
+/* ==========================================
+   INTERNSHIPS
+========================================== */
+
+.resume-page .internship{
+
+    margin-bottom:20px;
+
+}
+
+.resume-page .internship h3{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    font-size:17px;
+
+    color:#111827;
+
+    margin-bottom:5px;
+
+}
+
+.resume-page .internship .company{
+
+    color:#2563eb;
+
+    font-weight:500;
+
+}
+
+.resume-page .internship .divider{
+
+    color:#9ca3af;
+
+    font-weight:500;
+
+}
+
+.resume-page .internship small{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.resume-page .internship ul{
+
+    margin-left:18px;
+
+}
+
+.resume-page .internship li{
+
+    margin-bottom:6px;
+
+    color:#4b5563;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+.resume-page .right .card ul{
+
+    list-style:none;
+
+    margin-left:0;
+
+}
+
+.resume-page .right .card ul li{
+
+    background:#f9fafb;
+
+    border-left:4px solid #2563eb;
+
+    padding:12px 16px;
+
+    margin-bottom:12px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.resume-page .right .card ul li:hover{
+
+    background:#eff6ff;
+
+    transform:translateX(4px);
+
+}
+
+/* View Project Button */
+
+.resume-page .project a {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px 18px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: all 0.3s ease;
+
+}
+
+.resume-page .project a:hover {
+
+    background: #1d4ed8;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    text-decoration: none;
+
+}
+
+.resume-page .project a i {
+
+    font-size: 13px;
+
+}
+
+/* ==========================================
+   STRONG-TAG
+========================================== */
+
+.strong-tag{
+    
+    font-weight: 500;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+.resume-page a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+}
+
+.resume-page a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.resume-page .resume{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.resume-page .card{
+
+    animation:fadeCard .7s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESUME ACTION BUTTONS
+========================================== */
+
+.resume-page .resume-actions{
+
+    display:flex;
+
+    justify-content: end;
+
+    gap:15px;
+
+    margin-top:10px;
+
+    margin-bottom: 10px;
+
+    margin-right: 10px;
+
+    flex-wrap:wrap;
+
+}
+
+.resume-page .action-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    color:#fff;
+
+}
+
+.resume-page .download-btn{
+
+    background:#2563eb;
+
+}
+
+.resume-page .download-btn:hover{
+
+    background:#1d4ed8;
+
+    text-decoration:none;
+
+    transform:translateY(-3px);
+
+}
+
+.resume-page .portfolio-btn{
+
+    background:#0f172a;
+
+}
+
+.resume-page .portfolio-btn:hover{
+
+    background:#020617;
+
+    text-decoration:none;
+
+    transform:translateY(-3px);
+
+}
+
+.resume-page .links-btn{
+
+    background:#10b981;
+
+}
+
+.resume-page .links-btn:hover{
+
+    background:#059669;
+
+    text-decoration:none;
+
+    transform:translateY(-3px);
+
+}
+
+.resume-page .action-btn i{
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   RESUME FOOTER
+========================================== */
+
+.resume-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e7eb;
+
+}
+
+.resume-footer-text {
+
+    flex: 1;
+
+}
+
+.resume-footer-text p {
+
+    font-size: 13px;
+
+    color: #6b7280;
+
+}
+
+.resume-qr {
+
+    text-align: center;
+
+}
+
+.resume-qr img {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.resume-qr img:hover {
+
+    transform: scale(1.05);
+
+}
+
+.resume-qr p {
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    color: #6b7280;
+
+    line-height: 1.4;
+
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:1100px){
+
+    .resume-page .resume{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:900px){
+
+    .resume-page .content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .resume-page .career-header{
+
+        padding:35px;
+
+    }
+
+    .resume-page .summary{
+
+        padding:30px;
+
+    }
+
+    .resume-page .content{
+
+        padding:0 30px 30px;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .resume-page .career-header{
+
+        padding:30px 20px;
+
+    }
+
+    .resume-page .career-header h1{
+
+        font-size:28px;
+
+    }
+
+    .resume-page .designation{
+
+        font-size:15px;
+
+    }
+
+    .resume-page .contact{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .resume-page .links{
+
+        flex-direction:column;
+
+    }
+
+    .resume-page .links a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .resume-page .summary{
+
+        padding:20px;
+
+    }
+
+    .resume-page .content{
+
+        padding:0 20px 20px;
+
+    }
+
+    .resume-page .card{
+
+        padding:18px;
+
+    }
+
+}
+
+/* ==========================================
+   PRINT (PDF EXPORT)
+========================================== */
+
+@page{
+    size: A4 portrait;
+    margin: 8mm;
+}
+
+@media print {
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+        font-size: 10px;
+        line-height: 1.35;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+     /* Hide everything on the page */
+    body * {
+        visibility: hidden !important;
+    }
+
+    /* Show only the resume */
+    .resume-page * {
+        visibility: visible !important;
+    }
+
+    .resume-page {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 210mm;
+        min-height: 297mm;
+
+        margin: 0;
+        padding: 0;
+
+        display: block;
+    }
+
+    .resume {
+        width: 210mm;
+        min-height: 297mm;
+
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+
+    /* Resume Container */
+
+    .resume-page .resume {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    /* Career-Header */
+
+    .resume-page .career-header {
+        padding: 15px 20px;
+        margin-bottom: 8px;
+    }
+
+    .resume-page .career-header h1 {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .resume-page .designation {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .resume-page .contact {
+        gap: 10px;
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    /* Hide Website Buttons */
+
+    .resume-page .links {
+        display: none;
+    }
+
+    .resume-page .resume-actions{
+
+    display:none !important;
+
+    }
+
+    /* Summary */
+
+    .resume-page .summary {
+        padding: 12px 20px;
+    }
+
+    .resume-page .summary h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .resume-page .summary p {
+        font-size: 10px;
+        line-height: 1.45;
+        text-align: justify;
+    }
+
+    /* ==========================
+       TWO COLUMN
+    ========================== */
+
+    .resume-page .content {
+
+        display: grid;
+
+        grid-template-columns: 33% 67%;
+
+        gap: 16px;
+
+        padding: 0 20px 15px;
+
+        align-items: start;
+
+    }
+
+    .resume-page .left,
+    .resume-page .right {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    /* ==========================
+       REMOVE WEBSITE DESIGN
+    ========================== */
+
+    .resume-page .card {
+
+        background: transparent !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+
+        border-radius: 0 !important;
+
+        padding: 0 !important;
+
+        margin-bottom: 10px;
+
+    }
+
+    .resume-page .card:hover {
+
+        transform: none !important;
+
+        box-shadow: none !important;
+
+    }
+
+    .resume-page hr {
+
+        margin: 8px 0;
+
+        border: none;
+
+        border-top: 1px solid #ddd;
+
+    }
+
+    /* ==========================
+       HEADINGS
+    ========================== */
+
+    .resume-page .card h2 {
+
+        font-size: 15px;
+
+        margin-bottom: 8px;
+
+    }
+
+    .resume-page .card h2::after {
+
+        display: none;
+
+    }
+
+    .resume-page .card h3 {
+
+        font-size: 12px;
+
+        margin-bottom: 3px;
+
+    }
+
+    .resume-page .card p,
+    .resume-page .card span,
+    .resume-page .card small,
+    .resume-page .card li {
+
+        font-size: 9px;
+
+        line-height: 1.35;
+
+    }
+
+    /* ==========================
+    PRINT - TECHNICAL SKILLS
+    ========================== */
+
+    .resume-page .skill-group{
+
+        margin-bottom:8px;
+
+    }
+
+    .resume-page .skill-group h3{
+
+        font-size:10px;
+
+        margin-bottom:2px;
+
+        color:#000;
+
+    }
+
+    .resume-page .skill-group p{
+
+        font-size:9px;
+
+        line-height:1.35;
+
+        color:#333;
+
+    }
+
+    /* ==========================================
+    PRINT - PROFESSIONAL EXPERIENCE
+    ========================================== */
+
+    .resume-page .job{
+
+        position:static !important;
+
+        padding-left:0 !important;
+
+        margin-bottom:12px !important;
+
+    }
+
+    .resume-page .job::before,
+    .resume-page .job::after{
+
+        display:none !important;
+
+        content:none !important;
+
+    }
+
+    .resume-page .job h3{
+
+        font-size:12px;
+
+        margin-bottom:2px;
+
+    }
+
+    .resume-page .job span{
+
+        display:inline;
+
+        color:#000;
+
+        font-weight:400;
+
+    }
+
+    .resume-page .job small{
+
+        display:block;
+
+        margin:2px 0 6px;
+
+        font-size:9px;
+
+        color:#666;
+
+    }
+
+    .resume-page .job ul{
+
+    display:none !important;
+
+    }
+
+    .resume-page .print-summary{
+
+        display:block;
+
+        margin-top:5px;
+
+        font-size:9px;
+
+        line-height:1.45;
+
+        text-align:justify;
+
+        color:#333;
+
+    }
+
+
+    /* ==========================================
+    PRINT - INTERNSHIPS
+    ========================================== */
+
+    .resume-page .internship{
+
+        margin-bottom:10px;
+
+    }
+
+    .resume-page .internship h3{
+
+        font-size:11px;
+
+        display:flex;
+
+        gap:5px;
+
+        flex-wrap:wrap;
+
+        margin-bottom:2px;
+
+    }
+
+    .resume-page .internship .company{
+
+        color:#000;
+
+        font-weight:500;
+
+    }
+
+    .resume-page .internship .divider{
+
+        color:#666;
+
+    }
+
+    .resume-page .internship small{
+
+        font-size:9px;
+
+        margin-bottom:5px;
+
+    }
+
+    .resume-page .internship ul{
+
+        display:none !important;
+
+    }
+
+    /* ==========================================
+    PRINT - PROJECTS
+    ========================================== */
+
+    .resume-page .project{
+
+        margin-bottom:10px;
+
+    }
+
+    .resume-page .project h3{
+
+        font-size:12px;
+
+        margin-bottom:2px;
+
+    }
+
+    .resume-page .project .tech{
+
+        display:block;
+
+        font-size:9px;
+
+        font-weight:500;
+
+        color:#555;
+
+        margin-bottom:3px;
+
+    }
+
+    .resume-page .project p{
+
+        font-size:9px;
+
+        margin-bottom:5px;
+
+        line-height:1.35;
+
+    }
+
+    /* Hide Live Demo links in PDF */
+    .resume-page .project a{
+
+        display:none !important;
+
+    }
+
+    /* Remove separators */
+    .resume-page hr{
+
+        margin:8px 0;
+
+        border:none;
+
+        border-top:1px solid #ddd;
+
+    }
+
+    /* ==========================
+       EDUCATION
+    ========================== */
+
+    .resume-page .education {
+
+        margin-bottom: 8px;
+
+    }
+
+    /* ==========================
+       CERTIFICATE
+    ========================== */
+
+    .resume-page .card .certificate li {
+
+        font-size: 9px;
+
+        line-height:1.6;
+    }
+
+    /* ==========================
+       PREVENT BREAKS
+    ========================== */
+
+    .resume-page .card,
+    .resume-page .job,
+    .resume-page .project,
+    .resume-page .education,
+    .resume-page .internship {
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+    }
+
+    /* ==========================================
+    PRINT FOOTER
+    ========================================== */
+
+    .resume-footer {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        margin-top: 10px;
+
+        padding-top: 8px;
+
+        border-top: 1px solid #ccc;
+
+    }
+
+    .resume-footer-text p {
+
+        font-size: 8px;
+
+        color: #555;
+
+    }
+
+    .resume-qr {
+
+        text-align: center;
+
+    }
+
+    .resume-qr img {
+
+        width: 58px;
+
+        height: 58px;
+
+    }
+
+    .resume-qr p {
+
+        font-size: 7px;
+
+        margin-top: 3px;
+
+        color: #555;
+
+    }
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.resume-page a:focus{
+
+    outline:2px solid #2563eb;
+
+    outline-offset:3px;
+
+}
+
+/* ==========================================
+   SMALL IMPROVEMENTS
+========================================== */
+
+.resume-page .card ul{
+
+    padding-left:18px;
+
+}
+
+.resume-page .card li{
+
+    line-height:1.6;
+
+}
+
+.resume-page .summary p{
+
+    text-wrap:pretty;
+
+}
+
+.resume-page .career-header h1{
+
+    text-wrap:balance;
+
+}
+
+.resume-page .links a{
+
+    font-weight:500;
+
+}
+
+.resume-page .card{
+
+    overflow:hidden;
+
+}
+
+.resume-page .job{
+
+    break-inside:avoid;
+
+}
+
+.resume-page .left .card,
+
+.resume-page .right .card{
+
+    break-inside:avoid;
+
+}

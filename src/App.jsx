@@ -19,6 +19,8 @@ import Loader from './components/Loader';
 import Chatbot from './components/Chatbot';
 import KayarepeWebsite from './components/KayarepeWebsite';
 import TwoFaceWebsite from './components/TwoFaceWebsite';
+import Connect from './components/Connect';
+import Resume from './components/Resume';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -37,6 +39,8 @@ const AnimatedRoutes = () => {
           <Route path="/twofacewebsite" element={<TwoFaceWebsite/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<ERROR_404 />} />
+          <Route path="/links" element={<Connect />} />
+          <Route path="/career" element={<Resume />} />
         </Routes>
       </AnimatePresence>
       <Footer />

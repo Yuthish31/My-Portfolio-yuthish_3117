@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import Logoimg from '../assets/img/logo.png';
 import './Contact.css';
 
 const Contact = () => {
@@ -104,7 +105,7 @@ const Contact = () => {
       <div className="contact-card">
         <div className="contact-header">
           <img 
-            src="https://github.com/Yuthish31/images-/blob/main/logo.png?raw=true" 
+            src={Logoimg}
             alt="Logo" 
             className="logo" 
           />

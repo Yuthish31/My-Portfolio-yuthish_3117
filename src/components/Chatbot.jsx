@@ -81,8 +81,17 @@ function Chatbot() {
         ...prev,
         {
           type: 'bot',
-          text: '📄 Here is my resume:',
-          link: '/assets/Yuthishthira_senthil_M_Resum.pdf',
+          text: <>
+                📄 Here is my resume:<br />
+                    <a
+                      href="/career"  
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="chatbot-button"
+                    >
+                      📎 Resume
+                    </a>
+                </> 
         },
       ]);
       setIsLoading(false);

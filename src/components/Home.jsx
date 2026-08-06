@@ -5,20 +5,8 @@ import Animated from './Animated';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import character from '../assets/img/hero.png';
-import resumePDF from '../assets/Yuthishthira_senthil_M_Resum.pdf';
 
 function Home() {
-
-  // Function to handle resume download
-  const handleResumeDownload = () => {
-    // Create a temporary anchor tag
-    const link = document.createElement('a');
-    link.href = resumePDF;
-    link.download = 'Yuthishthira_senthil_M_Resum.pdf'; // Customize filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <motion.div
@@ -63,11 +51,7 @@ function Home() {
           Dreams may not be real yet, but the pursuit makes them possible.
           </p></Animated>
           <div className="buttons">
-            <Animated delay={0.4}>
-              <button onClick={handleResumeDownload} className="btn RES">
-                Resume
-              </button>
-            </Animated>
+            <Animated delay={0.4}><Link to="/career" className="btn RES">Career</Link></Animated>
             <Animated delay={0.5}><Link to="/creations" className="btn">My Creations</Link></Animated>
             <Animated delay={0.6}><Link to="/contact" className="btn CON">Contact</Link></Animated>
           </div>
