@@ -258,7 +258,7 @@ function Resume() {
                                     </span>
                                 </h3>
                                 <small>
-                                    July 2025 – Present
+                                    July 2025 – August 2026
                                 </small>
                                 <ul>
                                     <li>
