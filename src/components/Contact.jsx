@@ -1,9 +1,19 @@
-
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import Logoimg from '../assets/img/logo.png';
 import './Contact.css';
+
+// Generate SHA-256 hash for Gravatar
+const getEmailHash = async (email) => {
+  const normalizedEmail = email.trim().toLowerCase();
+  const data = new TextEncoder().encode(normalizedEmail);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(byte => byte.toString(16).padStart(2, '0'))
+    .join('');
+};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,16 +69,21 @@ const Contact = () => {
       // Automatically get the current year
       const currentYear = new Date().getFullYear();
 
+      // Generate Gravatar email hash
+      const emailHash = await getEmailHash(formData.email);
+
       // First send the notification to yourself
       const notificationResponse = await emailjs.send(
         'service_8e9jbwk',
         'template_2c7lmpl',
         {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
           time: new Date().toLocaleString(),
-          reply_to: formData.email
+          reply_to: formData.email.trim(),
+          emailHash: emailHash,
+          current_year: currentYear
         }
       );
 
@@ -79,9 +94,9 @@ const Contact = () => {
         'service_8e9jbwk',
         'template_rdnbqjy',
         {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
           your_name: 'Yuthishthira senthil M',
           current_year: currentYear
         }
@@ -91,6 +106,7 @@ const Contact = () => {
 
       // Success
       setSubmitStatus('success');
+
       setFormData({
         name: '',
         email: '',
@@ -98,6 +114,7 @@ const Contact = () => {
       });
 
     } catch (error) {
+
       // Keep technical errors available for debugging
       console.error('EmailJS Contact Form Error:', {
         status: error?.status,
